@@ -1,3 +1,9 @@
+package service
+
+import (
+	"errors"
+	math "math/rand"
+)
 
 func (n PoSNetwork) SelectWinner() (*Node, error) {
 	var winnerPool []*Node

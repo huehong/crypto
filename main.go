@@ -1,8 +1,12 @@
 package main
 
 import (
+	"fmt"
+	"log"
+	math "math/rand"
 	"time"
-	"math"
+
+	"github.com/huehong/crypto/service"
 )
 
 func main() {
@@ -11,12 +15,12 @@ func main() {
 
 	// generate an initial PoS network including a blockchain with a genesis block.
 	genesisTime := time.Now().String()
-	pos := &PoSNetwork{
-		Blockchain: []*Block{
+	pos := &service.PoSNetwork{
+		Blockchain: []*service.Block{
 			{
-				Timestamp: genesisTime,
-				PrevHash: "",
-				Hash: newHash(genesisTime),
+				Timestamp:     genesisTime,
+				PrevHash:      "",
+				Hash:          service.NewHash(genesisTime),
 				ValidatorAddr: "",
 			},
 		},

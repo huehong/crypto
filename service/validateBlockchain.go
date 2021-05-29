@@ -1,3 +1,6 @@
+package service
+
+import "errors"
 
 func (n PoSNetwork) ValidateBlockchain() error {
 	if len(n.Blockchain) <= 1 {

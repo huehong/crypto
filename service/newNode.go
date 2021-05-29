@@ -1,3 +1,9 @@
+package service
+
+import (
+	"fmt"
+	math "math/rand"
+)
 
 func (n PoSNetwork) NewNode(stake int) []*Node {
 	newNode := &Node{

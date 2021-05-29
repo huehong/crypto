@@ -1,3 +1,7 @@
+package service
+
+import "time"
+
 func (n PoSNetwork) GenerateNewBlock(Validator *Node) ([]*Block, *Block, error) {
 	if err := n.ValidateBlockchain(); err != nil {
 		Validator.Stake -= 10
